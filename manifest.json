@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Detector (Personal)",
+  "version": "1.0",
+  "description": "Logs when YouTube ads are showing (for educational or personal use only).",
+  "permissions": ["scripting", "tabs", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["detector.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Ad Detector"
+  }
+}
